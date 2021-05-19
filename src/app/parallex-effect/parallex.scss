@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+min-height: 2500px;
+}
+
+.parallex-container {
+    padding: 0;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallex-container::before {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #1b242f, transparent);
+    z-index: 10;
+}
+
+.parallex-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    z-index: 5;
+}
+
+.parallex-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#bg_bottom {
+    top: 300px;
+    z-index: 7;
+}
+
+#bg_clouds {
+    top: 20px;
+}
+
+#bg_sun{
+    width: 300px;
+    height:300px;
+}
+
+.parallex-header-text {
+    margin-top: -380px;
+    position: relative;
+    color: rgb(95, 95, 95);
+    font-size: 40px;
+    z-index: 1;
+
+
+}
+
+.button-start{
+    margin-top: -180px;
+    color: white;
+    position: relative;
+    width: 330px;
+    text-align: center;
+    padding: 8px;
+    border: 2px solid white;
+    border-radius: 8px;
+    font-size: 30px;
+    background-color: #39728d;
+    cursor: pointer;
+    z-index: 6;
+    opacity: 1;
+}
+
+.transparent {
+opacity: 0;
+transition: opacity ease-in-out 225ms ;
+}
