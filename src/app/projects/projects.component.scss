@@ -1,0 +1,31 @@
+.ProjectsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+    ::before {
+        content: "";
+        position: absolute;
+        width: 200%;
+        height: 100%;
+        top: 0%;
+        left: -50%;
+        z-index: -1;
+        background-color: black;
+        /*background: url(background.png) 0 0 repeat;*/
+        transform: rotate(-6deg);
+      }
+}
+
+.listContainer {
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+

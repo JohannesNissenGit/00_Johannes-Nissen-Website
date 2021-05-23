@@ -12,6 +12,18 @@ body {
     display: flex;
 }
 
+.d-none {
+    display: none;
+}
+
+.z10 {
+    z-index: 10;
+}
+
+.zMinus100 {
+    z-index: -100;
+}
+
 .flex-row {
     flex-direction: row;
 }
@@ -105,18 +117,43 @@ body {
 
 /*button styles*/
 
+.scrolldownContainer {
+    display: flex;
+    justify-content: center;
+    img {
+        padding: 10px;
+        width: 90px;
+        height: 90px;
+        object-fit: cover;
+        object-position: center;
+        border: 3px solid white;
+        border-radius: 50%;
+        margin-top: 50px;
+        cursor: pointer;
+        transition: transform ease-in-out 225ms;
+        
+        &:hover {
+            transform: scale(1.2);
+            
+        }
+    }
+}
+
 .btnPrimaryDefault {
     cursor: pointer;
     border: 2px solid #2dfcd8;
-    background-color: none;
+    color: #2dfcd8; 
+    background-color: black;
     height: 70px;
     width: 250px;
     padding: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    transition: background-color ease-in-out 225ms;
+    //transition: color ease-in-out 225ms;
     &:hover {
+        
         color: white !important;
         background-color: #2dfcd8 !important;
     }

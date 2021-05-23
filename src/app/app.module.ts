@@ -9,6 +9,12 @@ import { ImprintComponent } from './imprint/imprint.component';
 import { ParallexEffectComponent } from './parallex-effect/parallex-effect.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { SkillsComponent } from './skills/skills.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { ContactComponent } from './contact/contact.component';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,10 +24,16 @@ import { HeaderComponent } from './header/header.component';
     ImprintComponent,
     ParallexEffectComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    SkillsComponent,
+    ProjectsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],
