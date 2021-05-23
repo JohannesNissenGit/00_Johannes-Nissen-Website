@@ -1,0 +1,13 @@
+.legalLinkstyle{
+
+    a{
+    text-decoration: underline;
+    color: rgba(255, 255, 255, 0.76);
+
+        &:hover {
+            color: white;
+        }
+}
+
+
+}

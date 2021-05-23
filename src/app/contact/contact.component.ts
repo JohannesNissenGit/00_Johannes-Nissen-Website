@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -22,12 +22,23 @@ export class ContactComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
 
+  @ViewChild('contactname') contactname: ElementRef;
+  @ViewChild('contactemail') contactemail: ElementRef;
+  @ViewChild('contactmessage') contactmessage: ElementRef;
+  
   ngOnInit(): void {
 
   }
 
   submit() {
     // TODO: Use EventEmitter with form value
+
+    /*let namelength = this.contactname.length;
+    let emaillength = this.contactemail.length;
+    let messagelength = this.contactmessage.length;*/
+
+    //if(namelength > 0 && emaillength > 0 && messagelength >0){ alert("Entries invalid. Please try again."); }
+    
     console.warn(this.profileForm.value);
 
     this.http.post(this.endpoint, this.profileForm.value).subscribe(
