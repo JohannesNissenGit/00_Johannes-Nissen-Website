@@ -14,7 +14,7 @@ export class MainComponent implements OnInit {
 
   ngOnInit(): void {
 
-    if (window.screen.width < 600) { // 768px portrait  //hides parallex component in mobile view
+    if (window.screen.width < 950) { // //hides parallex component in narrow displays, mobile view
       this.desktop = false;
     }
   }

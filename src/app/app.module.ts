@@ -8,6 +8,7 @@ import { LegalnoticeComponent } from './legalnotice/legalnotice.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { ParallexEffectComponent } from './parallex-effect/parallex-effect.component';
 import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FooterComponent } from './footer/footer.component';
     LegalnoticeComponent,
     ImprintComponent,
     ParallexEffectComponent,
-    FooterComponent
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

@@ -2,4 +2,123 @@
 
 body {
     margin: 0;
+    font-family: "Inter", sans-serif;
+    background-color: black;
+}
+
+/*general*/
+
+.d-flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+/*main text colors*/
+
+.color1red {
+    color: #fa2759;
+}
+
+.color2green {
+    color: #2dfcd8;
+}
+
+.color3grey {
+    color: #1a1a1a;
+}
+
+.color4black {
+    color: #000000;
+}
+
+.color5white {
+    color: white;
+}
+
+/*main background colors*/
+
+.bgcolor1red {
+    background-color: #fa2759;
+}
+
+.bgcolor2green {
+    background-color: #2dfcd8;
+}
+
+.bgcolor3grey {
+    background-color: #1a1a1a;
+}
+
+.bgcolor4black {
+    background-color: #000000;
+}
+
+/*main text headlines style*/
+
+.hl1 {
+    //display: block;
+    //font-size: 2em;
+    font-size: 64px;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+.hl2 {
+    // display: block;
+    //font-size: 1.5em;
+    font-size: 36px;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+.hl3 {
+    // display: block;
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+.p {
+    display: block;
+    font-size: 18px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.hl1spaceleft {
+    margin-left: 12px;
+}
+
+/*button styles*/
+
+.btnPrimaryDefault {
+    cursor: pointer;
+    border: 2px solid #2dfcd8;
+    background-color: none;
+    height: 70px;
+    width: 250px;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        color: white !important;
+        background-color: #2dfcd8 !important;
+    }
+    
 }
