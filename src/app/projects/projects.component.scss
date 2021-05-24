@@ -2,22 +2,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
+    width: 100% !important;
+    height: 110vh !important;
     position: relative;
+    background-color: #1a1a1a;
+    overflow: hidden;
+}
 
-    &::before {
-        content: "";
-        position: absolute;
-        width: 200%;
-        height: 100%;
-        top: 0%;
-        left: -50%;
-        z-index: -1;
-        background-color: black;
-        /*background: url(background.png) 0 0 repeat;*/
-        transform: rotate(-6deg);
-      }
+.ProjectsContainer:before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 80%;
+    top: 150px;
+    left: -50%;
+    background-color: black;
+    /*background: url(background.png) 0 0 repeat;*/
+    transform: rotate(-6deg);
+}
+
+.ProjectsHeadline {
+    margin-top: 170px;
 }
 
 .listContainer {
@@ -26,6 +31,4 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
 }
-
