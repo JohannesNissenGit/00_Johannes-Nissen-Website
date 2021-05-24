@@ -1,18 +1,25 @@
 <div class="contactContainer d-flex bgcolor3grey">
+    <div class="contactFormContainer">
+        <div class="hl1 color5white textCenter">Contact:</div>
 
-    <div class="hl1 color5white">Contact:</div>
+        <form [formGroup]="profileForm" (ngSubmit)="submit ()" class="slide-animation">
+            <div class="formRow hl2 color5white">Name</div>
+            <input formControlName="name" type="text" class="feedbackInput" #contactname id="#contactname"
+                placeholder="Enter your name*" required />
+            <div class="formRow hl2 color5white">E-mail adress</div>
+            <input formControlName="email" type="text" class="feedbackInput" #contactemail id="contactemail"
+                placeholder="Enter your Email*" required />
+            <div class="formRow hl2 color5white">Your message</div>
+            <textarea formControlName="message" type="text" class="feedbackInput" #contactmessage id="contactmessage"
+                placeholder="Enter your message*" required></textarea>
+            <button (click)="openSnackbar()" class="btnPrimaryDefault" type="submit"
+                [disabled]="!profileForm.valid">Submit </button>
+        </form>
 
-    <form [formGroup]="profileForm" (ngSubmit)="submit ()" class="slide-animation">
-        <div class="formRow hl2 color5white">Name</div>
-        <input formControlName="name" type="text" class="feedbackInput" #contactname id="#contactname" placeholder="Enter your name*"   required/>
-        <div class="formRow hl2 color5white">E-mail adress</div>
-        <input formControlName="email" type="text" class="feedbackInput" #contactemail id="contactemail" placeholder="Enter your Email*"  required/>
-        <div class="formRow hl2 color5white">Your message</div>
-        <textarea formControlName="message" type="text" class="feedbackInput" #contactmessage id="contactmessage" placeholder="Enter your message*"  required></textarea>
-       <button (click)="openSnackbar()" class="btnPrimaryDefault" type="submit" [disabled]="!profileForm.valid">Submit </button>
-    </form>
+        <div class="snackbar d-none zMinus100 bgcolor4black" id="snackbar">Message has been sent. Thank you!</div>
 
-    <div class="snackbar d-none zMinus100 bgcolor4black" id="snackbar">Message has been sent. Thank you!</div>
-
+        <div onclick="scrollView('welcomeContainer')" class="scrolldownContainer inverseImg contactScroller"><img
+                src="./assets/icons/arrow-204-256.png" alt=""></div>
+    </div>
 
 </div>

@@ -4,6 +4,13 @@
     width: 100%;
 }
 
+.contactFormContainer{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
 .contact-font {
     font-size: 5.6rem;
     letter-spacing: 4px;
@@ -18,11 +25,9 @@ form {
     align-items: center;
 }
 
-
-.formRow{
+.formRow {
     width: 100%;
     text-align: left;
-
 }
 .feedbackInput {
     color: #e3e9ec;
@@ -50,7 +55,6 @@ textarea {
 }
 
 [type="submit"] {
-    
     width: 40%;
     //background: #ff665a;
     //border: 0;
@@ -63,13 +67,22 @@ textarea {
     margin-top: 25px;
     margin-bottom: 35px;
     font-weight: 700;
-
 }
 
+.snackbar {
+    border: 1px solid white;
+    color: white !important;
+    padding: 15px;
+    margin-bottom: 20px;
+}
 
-.snackbar{
-  border: 1px solid white;
-  color: white !important;
-  padding: 15px;
-  margin-bottom: 20px;
+.inverseImg img {
+    transform: rotate(180deg);
+}
+
+.contactScroller{
+    position: absolute;
+    right: 10%;
+    bottom: 20px;
+    z-index: 6;
 }
