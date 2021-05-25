@@ -9,9 +9,14 @@ function test(){
 *scroll functions
 */
 
-function scrollView(id){
+function scrollView(id, scroller){
     let element = document.getElementById(id);
     element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    let disappear = document.getElementById(scroller);
+    disappear.classList.add('disappearFX');
+    setTimeout(() => {
+        disappear.classList.remove('disappearFX');
+    }, 225);
 }
 
 function scrollTo(elementId){

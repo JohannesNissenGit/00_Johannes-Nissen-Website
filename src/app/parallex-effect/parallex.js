@@ -17,6 +17,7 @@ window.addEventListener('scroll', function() {
 } )
 */
 
+
 $('#startbutton').on('click', function(event){
     event.preventDefault();
     $('html, body').stop().animate({scrollTop: $('#welcomeContainer').offset().top}, 2600);

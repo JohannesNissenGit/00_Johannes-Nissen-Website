@@ -7,12 +7,43 @@
     overflow-x: hidden;
 }
 
-
 .listContainer {
     width: 800px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
 
+.skillSingleContainer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 200px;
+    height: 180px;
+    margin-left: 20px;
+    margin-top: 24px;
+    //background-color: yellow;
+
+    img {
+        padding: 5px;
+        position: absolute;
+        height: 75px;
+        width: 75px;
+        object-fit: cover;
+        background-color: white;
+        border-radius: 50%;
+        box-shadow: 1px 2px 2px 2px rgba(177, 177, 177, 0.5);
+    }
+}
+
+.skillSingle {
+    width: 100%;
+    background-color: white;
+    height: 120px;
+    margin-top: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

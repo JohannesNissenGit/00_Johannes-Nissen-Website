@@ -4,7 +4,7 @@
     width: 100%;
 }
 
-.contactFormContainer{
+.contactFormContainer {
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -76,13 +76,30 @@ textarea {
     margin-bottom: 20px;
 }
 
-.inverseImg img {
-    transform: rotate(180deg);
-}
-
-.contactScroller{
-    position: absolute;
-    right: 10%;
-    bottom: 20px;
+.contactScroller {
+    //position: absolute;
+    //right: 10%;
+    //bottom: 20px;
     z-index: 6;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    img {
+        transform: rotate(180deg);
+        padding: 10px;
+        width: 90px;
+        height: 90px;
+        object-fit: cover;
+        object-position: center;
+        border: 3px solid white;
+        border-radius: 50%;
+
+        cursor: pointer;
+        transition: transform ease-in-out 225ms;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
 }
