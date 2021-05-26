@@ -41,23 +41,23 @@
 .singleProjectContainer {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     position: relative;
-    width: 320px;
-    height: 320px;
     margin: 20px;
     opacity: 0.8;
     transition: opacity ease-in-out 225ms;
 
     img {
-        width: 100%;
-        height: 100%;
+        width: 320px;
+    height: 320px;
         padding: 8px;
         object-fit: cover;
         border-radius: 16px;
     }
 
     &:hover {
+       // &:hover + .hide {
         opacity: 1;
     }
 }

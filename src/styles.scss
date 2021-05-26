@@ -174,3 +174,26 @@ body {
     }
     
 }
+
+.btnStartApp {
+    position: absolute;
+    z-index: 11;
+    cursor: pointer;
+    border: 2px solid #2dfcd8;
+    color: #2dfcd8; 
+    background-color: black;
+    border-radius: 12px;
+    margin-top:260px;
+    height: 30px;
+    width: 100px;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color ease-in-out 225ms;
+    //transition: color ease-in-out 225ms;
+    &:hover {
+        color: white !important;
+        background-color: #2dfcd8 !important;
+    }
+}
