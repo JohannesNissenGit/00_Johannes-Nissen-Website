@@ -27,7 +27,7 @@
 
 .projectsListContainer {
     z-index: 6;
-    width: 1080px;
+    width: 1180px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -51,7 +51,7 @@
     position: relative;
     margin: 20px;
     opacity: 0.86;
-    transition: opacity ease-in-out 200ms;
+    transition: opacity ease-in-out 230ms;
 
     img {
         width: 320px;
@@ -90,12 +90,12 @@
     text-align: center;
     font-size: 20px;
     margin-top: 100px;
-   
+
     color: white;
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-.singleProjectButtonRow{
+.singleProjectButtonRow {
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -122,5 +122,33 @@
     &:hover {
         color: white !important;
         background-color: #2dfcd8 !important;
+    }
+}
+
+/*animation shimmer*/
+
+.wrapper {
+    width: 360px !important;
+    animation: fullView 0.5s forwards linear;
+}
+
+@keyframes fullView {
+    100% {
+        width: 100%;
+    }
+}
+
+.animate {
+    animation: shimmer 2s infinite;
+    background: linear-gradient(to right, #eff1f3 4%, #e2e2e2 25%, #eff1f3 36%);
+    background-size: 200px 100%;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200px 0;
+    }
+    100% {
+        background-position: 200px 0;
     }
 }

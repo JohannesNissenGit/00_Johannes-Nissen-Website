@@ -23,9 +23,9 @@ export class ParallexEffectComponent implements OnInit, AfterViewInit {
       this.bg_sky.nativeElement.style.top = value * 0.5 + 'px';
       /*bg_clouds.style.left =  value *0.3 + 'px';*/
       /*bg_clouds.style.top =  value *0.5 + 'px';*/
-      this.bg_sun.nativeElement.style.top = 0 + value * 0.6 + 'px';
+      this.bg_sun.nativeElement.style.top = 0 + value * 0.7 + 'px';
       this.bg_sun.nativeElement.style.left = 0 + value * 0.7 + 'px';
-      this.bg_bottom.nativeElement.style.top = 300 + value * 0.2 + 'px';
+      this.bg_bottom.nativeElement.style.top = 300 + value * 0.3 + 'px';
       this.text.nativeElement.style.top = value * 0.7 + 'px';
       this.startbutton.nativeElement.style.top = value * 0.9 + 'px';
     });
