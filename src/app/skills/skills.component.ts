@@ -7,16 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillsComponent implements OnInit {
 
-  skills = [
-    {
-      'name': 'JavaScript',
-      'img': './assets/icons/arrow-204-256.png'
-    }
-  ];
+isInViewport = false;
+skills!: any;
 
   constructor() { }
 
   ngOnInit(): void {
+this.skills= document.getElementById('skills');
+
+window.addEventListener("scroll", () => {
+  let rect = this.skills.getBoundingClientRect();
+
+  if (rect.y >=0 && rect.y <= window.innerHeight){
+    this.isInViewport = true;
+  }
+})
+
   }
 
   loadSkills() {
