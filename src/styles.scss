@@ -179,3 +179,77 @@ body {
     
 }
 
+
+
+/*
+*ANIMATIONS:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+*/
+
+/*animation slide into view from right*/
+.slide-StartPositionRight{
+    transform: translate(1400px, 0);
+}
+
+.slide-AnimationFromRight {
+    animation-name: slideFromRight;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideFromRight {
+    0% {
+        transform: translate(1200px, 0);
+    }
+    25% {
+        transform: translate(400px, 0);
+    }
+    35% {
+        transform: translate(250px, 0);
+    }
+
+    50% {
+        transform: translate(100px, 0);
+    }
+    70% {
+        transform: translate(40px, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/*animation slide into view from left*/
+.slide-StartPositionLeft{
+    transform: translate(-1400px, 0);
+}
+
+.slide-AnimationFromLeft {
+    animation-name: slideFromLeft;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideFromLeft {
+    0% {
+        transform: translate(-1200px, 0);
+    }
+    25% {
+        transform: translate(-400px, 0);
+    }
+    35% {
+        transform: translate(-250px, 0);
+    }
+
+    50% {
+        transform: translate(-100px, 0);
+    }
+    70% {
+        transform: translate(-40px, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+

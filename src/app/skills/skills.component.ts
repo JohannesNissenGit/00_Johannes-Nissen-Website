@@ -7,39 +7,44 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillsComponent implements OnInit {
 
-isInViewport = false;
-skills!: any;
+  isInViewport = false;
+  skills!: any;
+  skillsLoaded = false;
+  skillsLoopCounter = 0;
 
   constructor() { }
 
   ngOnInit(): void {
-this.skills= document.getElementById('skills');
+    this.skills = document.getElementById('skillsAnim');
 
-window.addEventListener("scroll", () => {
-  let rect = this.skills.getBoundingClientRect();
+    window.addEventListener("scroll", () => {
+      let rect = this.skills.getBoundingClientRect();
 
-  if (rect.y >=0 && rect.y <= window.innerHeight){
-    this.isInViewport = true;
+      if (rect.y >= 0 && rect.y <= window.innerHeight) {
+        this.isInViewport = true;
+        console.log('anchor is in view');
+        //if (this.skillsLoaded = false) {
+           this.loadSkillsLoop();
+       // }
+      
+      }
+
+    })
+
   }
-})
 
+  loadSkillsLoop() {    //  https://stackoverflow.com/questions/3583724/how-do-i-add-a-delay-in-a-javascript-loop     
+    setTimeout(function() {
+      let counter = this.skillsLoopCounter;
+      let currentId = 'skill'+ counter;
+      document.getElementById(currentId).classList.add('slide-AnimationFromLeft');   //  call a setTimeout when the loop is called
+      console.log('iteration');   
+      this.skillsLoopCounter++;                    //  increment the counter
+      if (this.skillsLoopCounter < 9) {           //  if the counter <9, call the loop function
+        this.loadSkillsLoop();             //  ..  again which will trigger another 
+      }                       //  ..  setTimeout()
+    }, 125)
   }
 
-  loadSkills() {
-    for (let i = 0; i < this.skills.length; i++) {
-      let skillname = this.skills[i].name;
-      let skillImg = this.skills[i].img;
-      document.getElementById('listContainer').innerHTML +=
-        `<div class="skillSingleContainer" id='skill${i}'>
-  <img src="${skillImg}">
-  <div class="skillSingle">
-      <div class="hl3">
-      ${skillname}
-      </div>
-
-  </div>
-  </div>`;
-    }
-  }
 
 }

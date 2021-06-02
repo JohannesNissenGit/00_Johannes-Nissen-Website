@@ -1,11 +1,11 @@
 <div class="skillsContainer bgcolor3grey" id="skillsContainer">
 
     <!--headline-->
-    <div class="hl1 color5white">My Skills:</div>
-    <div class="anchor" id="skills"></div>
-    <div class="listContainer" id='listContainer' [class.slide-animation]="isInViewport">
+    <div class="hl1 color5white slide-StartPositionRight" [class.slide-AnimationFromRight]="isInViewport" [class.remove.slide-AnimationFromRight]="!isInViewport">My Skills:</div>
+    <div class="anchor" id="skillsAnim"></div>
+    <div class="listContainer" id='listContainer' >
 
-        <div class="skillSingleContainer" id="skill0">
+        <div class="skillSingleContainer slide-StartPositionLeft" id="skill0">
             <img src="./assets/logos/JavaScript-Logo.png" alt="">
             <div class="skillSingle">
                 <div class="hl3">
@@ -15,7 +15,7 @@
             </div>
         </div>
 
-        <div class="skillSingleContainer" id="skill1">
+        <div class="skillSingleContainer slide-StartPositionLeft" id="skill1">
             <img src="./assets/logos/css.png" alt="">
             <div class="skillSingle">
                 <div class="hl3">
@@ -25,7 +25,7 @@
             </div>
         </div>
 
-        <div class="skillSingleContainer" id="skill2">
+        <div class="skillSingleContainer slide-StartPositionLeft" id="skill2">
             <img src="./assets/logos/angular.png" alt="">
             <div class="skillSingle">
                 <div class="hl3">
