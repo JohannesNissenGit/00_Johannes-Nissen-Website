@@ -9,6 +9,7 @@ export class SkillsComponent implements OnInit {
 
   isInViewport = false;
   skills!: any;
+  skillsAnim2!: any;
   skillsLoaded = false;
   skillsLoopCounter = 0;
 
@@ -23,10 +24,24 @@ export class SkillsComponent implements OnInit {
       if (rect.y >= 0 && rect.y <= window.innerHeight) {
         this.isInViewport = true;
         console.log('anchor is in view');
+         //  this.loadSkillsLoop();
+      }
+    })
+
+    this.skillsAnim2 = document.getElementById('skillsAnim2');
+
+    window.addEventListener("scroll", () => {
+      let rect = this.skillsAnim2.getBoundingClientRect();
+
+      if (rect.y >= 0 && rect.y <= window.innerHeight) {
+        this.isInViewport = true;
+        console.log('anchor is in view');
            this.loadSkillsLoop();
       }
 
     })
+
+
 
   }
 

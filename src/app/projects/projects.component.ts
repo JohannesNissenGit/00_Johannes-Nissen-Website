@@ -8,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
 export class ProjectsComponent implements OnInit {
 
 
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
- 
+ startApp(url) {
+  window.open(url,'_blank');
+ }
+
+ openDoc(url) {
+  window.open(url,'_blank');
+ }
+
 }

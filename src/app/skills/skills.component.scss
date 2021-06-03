@@ -5,6 +5,7 @@
     width: 100%;
     height: 80vh;
     overflow-x: hidden;
+    position: relative;
 }
 
 .listContainer {
@@ -48,3 +49,7 @@
     justify-content: center;
 }
 
+.anchorSkills2 {
+    position: absolute;
+    margin-top: 400px;
+}
