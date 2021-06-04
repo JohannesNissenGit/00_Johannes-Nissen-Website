@@ -24,7 +24,7 @@ export class SkillsComponent implements OnInit {
       if (rect.y >= 0 && rect.y <= window.innerHeight) {
         this.isInViewport = true;
         //console.log('anchor is in view');
-         //  this.loadSkillsLoop();
+        //  this.loadSkillsLoop();
       }
     })
 
@@ -35,8 +35,8 @@ export class SkillsComponent implements OnInit {
 
       if (rect.y >= 0 && rect.y <= window.innerHeight) {
         this.isInViewport = true;
-        console.log('anchor is in view');
-           this.loadSkillsLoop();
+        //console.log('anchor is in view');
+        this.loadSkillsLoop();
       }
 
     })
@@ -46,17 +46,18 @@ export class SkillsComponent implements OnInit {
   }
 
   loadSkillsLoop() {    //  https://stackoverflow.com/questions/3583724/how-do-i-add-a-delay-in-a-javascript-loop     
-    setTimeout( () => {
-      let counter = this.skillsLoopCounter;
-      let currentId = 'skill'+ counter;
-      document.getElementById(currentId).classList.add('slide-AnimationFromLeft');   //  call a setTimeout when the loop is called
-      console.log('iteration');   
-      this.skillsLoopCounter++;                    //  increment the counter
-      if (this.skillsLoopCounter < 9) {           //  if the counter <9, call the loop function
-        this.loadSkillsLoop();             //  ..  again which will trigger another 
-      }                       //  ..  setTimeout()
-    }, 125)
+    if (this.skillsLoopCounter <9) {
+      setTimeout(() => {
+        let counter = this.skillsLoopCounter;
+        let currentId = 'skill' + counter;
+        document.getElementById(currentId).classList.add('slide-AnimationFromLeft');   //  call a setTimeout when the loop is called
+        console.log('iteration');
+        this.skillsLoopCounter++;                    //  increment the counter
+        if (this.skillsLoopCounter < 9) {           //  if the counter <9, call the loop function
+          this.loadSkillsLoop();             //  ..  again which will trigger another 
+        }                       //  ..  setTimeout()
+      }, 125)
+    }
   }
-
 
 }

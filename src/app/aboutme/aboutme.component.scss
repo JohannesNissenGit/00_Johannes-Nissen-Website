@@ -1,0 +1,22 @@
+.aboutMeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100% !important;
+    height: 80vh !important;
+    position: relative;
+    background-color: #1a1a1a;
+    overflow: hidden;
+}
+
+.aboutMeContainer:before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 80%;
+    top: 150px;
+    left: -50%;
+    background-color: #1a1a1a;
+    /*background: url(background.png) 0 0 repeat;*/
+    transform: rotate(-6deg);
+}

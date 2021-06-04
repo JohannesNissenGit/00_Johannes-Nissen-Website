@@ -25,7 +25,7 @@ export class ProjectsComponent implements OnInit {
       if (rect.y >= 0 && rect.y <= window.innerHeight) {
         this.isInViewport = true;
         //console.log('anchor is in view');
-        
+
       }
     })
 
@@ -37,32 +37,33 @@ export class ProjectsComponent implements OnInit {
       if (rect.y >= 0 && rect.y <= window.innerHeight) {
         this.isInViewport = true;
         //console.log('anchor is in view');
-           this.loadProjectsLoop();
+        this.loadProjectsLoop();
       }
 
     })
 
   }
 
- startApp(url) {
-  window.open(url,'_blank');
- }
+  startApp(url) {
+    window.open(url, '_blank');
+  }
 
- openDoc(url) {
-  window.open(url,'_blank');
- }
+  openDoc(url) {
+    window.open(url, '_blank');
+  }
 
- loadProjectsLoop() {    //  https://stackoverflow.com/questions/3583724/how-do-i-add-a-delay-in-a-javascript-loop     
-  setTimeout( () => {
-    let counter = this.projectsLoopCounter;
-    let currentId = 'project'+ counter;
-    document.getElementById(currentId).classList.add('slide-AnimationFromLeft');   //  call a setTimeout when the loop is called
-    console.log('iteration');   
-    this.projectsLoopCounter++;                    //  increment the counter
-    if (this.projectsLoopCounter < 9) {           //  if the counter <9, call the loop function
-      this.loadProjectsLoop();             //  ..  again which will trigger another 
-    }                       //  ..  setTimeout()
-  }, 125)
-}
-
+  loadProjectsLoop() {
+    if (this.projectsLoopCounter < 5) {   //  https://stackoverflow.com/questions/3583724/how-do-i-add-a-delay-in-a-javascript-loop     
+      setTimeout(() => {
+        let counter = this.projectsLoopCounter;
+        let currentId = 'project' + counter;
+        document.getElementById(currentId).classList.add('slide-AnimationFromLeft');   //  call a setTimeout when the loop is called
+        console.log('iteration');
+        this.projectsLoopCounter++;                    //  increment the counter
+        if (this.projectsLoopCounter < 5) {           //  if the counter <9, call the loop function
+          this.loadProjectsLoop();             //  ..  again which will trigger another 
+        }                       //  ..  setTimeout()
+      }, 125)
+    }
+  }
 }

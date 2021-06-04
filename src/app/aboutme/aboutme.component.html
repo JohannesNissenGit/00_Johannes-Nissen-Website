@@ -1,0 +1,13 @@
+
+<div class="anchor" id="aboutMeHeaderAnim"></div>
+
+<div class="aboutMeContainer d-flex bgcolor3grey" id="aboutMeContainer">
+
+    <div class="hl1 color5white textCenter slide-StartPositionRight" [class.slide-AnimationFromRight]="isInViewport" [class.remove.slide-AnimationFromRight]="!isInViewport">About me:</div>
+
+
+<!--Arrow scroll down-->
+    <div onclick="scrollView('contactContainer', 'aboutMeScroller')" class="scrolldownContainer z5"><img
+            src="./assets/icons/arrow-204-256.png" alt="" id="aboutMeScroller">
+    </div>
+</div>
