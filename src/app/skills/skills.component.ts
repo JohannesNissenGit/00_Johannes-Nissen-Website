@@ -23,7 +23,7 @@ export class SkillsComponent implements OnInit {
 
       if (rect.y >= 0 && rect.y <= window.innerHeight) {
         this.isInViewport = true;
-        console.log('anchor is in view');
+        //console.log('anchor is in view');
          //  this.loadSkillsLoop();
       }
     })

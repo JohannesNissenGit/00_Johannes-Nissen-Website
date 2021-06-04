@@ -1,6 +1,7 @@
 <div class="contactContainer d-flex bgcolor3grey" id="contactContainer">
     <div class="contactFormContainer">
-        <div class="hl1 color5white textCenter">Contact:</div>
+        <div class="anchorContact" id="contactHeaderAnim"></div>
+        <div class="hl1 color5white textCenter slide-StartPositionRight" [class.slide-AnimationFromRight]="isInViewport" [class.remove.slide-AnimationFromRight]="!isInViewport">Contact:</div>
 
         <form [formGroup]="profileForm" (ngSubmit)="submit ()" class="slide-animation">
             <div class="formRow hl2 color5white">Name</div>

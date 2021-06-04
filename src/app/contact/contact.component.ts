@@ -20,6 +20,10 @@ export class ContactComponent implements OnInit {
     message: new FormControl('')
   });
 
+  //for animation
+  isInViewport = false;
+  contact!: any;
+
   constructor(private http: HttpClient) { }
 
   @ViewChild('contactname') contactname: ElementRef;
@@ -27,7 +31,17 @@ export class ContactComponent implements OnInit {
   @ViewChild('contactmessage') contactmessage: ElementRef;
   
   ngOnInit(): void {
+    this.contact = document.getElementById('contactHeaderAnim');
 
+    window.addEventListener("scroll", () => {
+      let rect = this.contact.getBoundingClientRect();
+
+      if (rect.y >= 0 && rect.y <= window.innerHeight) {
+        this.isInViewport = true;
+        //console.log('anchor is in view');
+        
+      }
+    })
   }
 
   submit() {
