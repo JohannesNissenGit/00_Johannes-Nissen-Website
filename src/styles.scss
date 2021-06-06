@@ -16,6 +16,14 @@ body {
     display: flex;
 }
 
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
 .d-none {
     display: none;
 }
@@ -32,11 +40,7 @@ body {
     z-index: -100;
 }
 
-.flex-row {
-    flex-direction: row;
-}
-
-.textCenter{
+.textCenter {
     text-align: center;
 }
 
@@ -127,12 +131,9 @@ body {
     margin-left: 12px;
 }
 
-
 /*scrollbutton disappear FX*/
-.disappearFX{
-    
+.disappearFX {
 }
-
 
 /*button styles*/
 
@@ -150,10 +151,9 @@ body {
         margin-top: 50px;
         cursor: pointer;
         transition: transform ease-in-out 225ms;
-        
+
         &:hover {
             transform: scale(1.2);
-            
         }
     }
 }
@@ -161,7 +161,7 @@ body {
 .btnPrimaryDefault {
     cursor: pointer;
     border: 2px solid #2dfcd8;
-    color: #2dfcd8; 
+    color: #2dfcd8;
     background-color: black;
     height: 70px;
     width: 250px;
@@ -172,21 +172,17 @@ body {
     transition: background-color ease-in-out 225ms;
     //transition: color ease-in-out 225ms;
     &:hover {
-        
         color: white !important;
         background-color: #2dfcd8 !important;
     }
-    
 }
-
-
 
 /*
 *ANIMATIONS:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 */
 
 /*animation slide into view from right*/
-.slide-StartPositionRight{
+.slide-StartPositionRight {
     transform: translate(1400px, 0);
 }
 
@@ -220,7 +216,7 @@ body {
 }
 
 /*animation slide into view from left*/
-.slide-StartPositionLeft{
+.slide-StartPositionLeft {
     transform: translate(-2400px, 0);
 }
 
@@ -253,3 +249,23 @@ body {
     }
 }
 
+/*animation opacity transformation 0 to 1*/
+.opacity-StartPosition0 {
+    transform: opacity(0) !important;
+}
+
+.opacity-0to1Anim {
+    //animation-name: opacity0to1;
+    //animation-duration: 300ms;
+    //animation-fill-mode: forwards;
+    animation: opacity0to1 400ms ease-in-out forwards;
+}
+
+@keyframes opacity0to1 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

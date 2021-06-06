@@ -1,12 +1,68 @@
+<div class="aboutMeContainer d-flex bgcolor3grey color5white" id="aboutMeContainer">
 
-<div class="anchor" id="aboutMeHeaderAnim"></div>
+    <div class="d-flex aboutMeRow">
 
-<div class="aboutMeContainer d-flex bgcolor3grey" id="aboutMeContainer">
+        <img class=" z10 opacity-StartPosition0" [class.opacity-0to1Anim]="isInViewport" src="./assets/img/Jo.jpg"
+            alt="">
+        <!--me, myself and i-->
+        <div class="anchor" id="aboutMeHeaderAnim"></div>
+        <!--anim anchor-->
+        <div class="d-flex flex-column">
+            <div class="hl1 color5white textCenter slide-StartPositionRight"
+                [class.slide-AnimationFromRight]="isInViewport" [class.remove.slide-AnimationFromRight]="!isInViewport">
+                About me:</div>
 
-    <div class="hl1 color5white textCenter slide-StartPositionRight" [class.slide-AnimationFromRight]="isInViewport" [class.remove.slide-AnimationFromRight]="!isInViewport">About me:</div>
 
 
-<!--Arrow scroll down-->
+
+            <div class="aboutMeTextTop">
+                <!--description-->
+                <h2> Hey, nice to meet you. I'm Johannes, a mechanical engineer who
+                    discovered his passion for coding. I live
+                    in Trier, Germany.</h2>
+            </div>
+        </div>
+    </div>
+
+    <hr class="aboutMeDividingLine">
+
+    <div class="d-flex lifeContainer">
+        <!--life-->
+
+        <div class="aboutMeLifeNote d-flex flex-column">
+            <img src="./assets/icons/walk-fill.png" alt="">
+            <div>
+                <h3> My coding journey began as a research associate at University,
+                    where i created automated templates for data evaluations. </h3>
+            </div>
+        </div>
+
+        <div class="aboutMeLifeNote d-flex flex-column">
+            <img src="./assets/icons/pulse-line.png" alt="">
+            <div>
+                <h3> I spent my first full-time job designing and testing gas-powered floatation devices for sea rescue
+                    operations. </h3>
+            </div>
+        </div>
+
+        <div class="aboutMeLifeNote d-flex flex-column">
+            <img src="./assets/icons/pencil-ruler-line.png" alt="">
+            <div>
+                <h3> The next step was designing complex valves for medical purposes. I got the chance to digitalize
+                    workflows and work closely with IT. </h3>
+            </div>
+        </div>
+
+        <div class="aboutMeLifeNote d-flex flex-column">
+            <img src="./assets/icons/star-smile-line.png" alt="">
+            <div>
+                <h3>Your company? Let's work together! </h3>
+            </div>
+        </div>
+
+    </div>
+
+    <!--Arrow scroll down-->
     <div onclick="scrollView('contactContainer', 'aboutMeScroller')" class="scrolldownContainer z5"><img
             src="./assets/icons/arrow-204-256.png" alt="" id="aboutMeScroller">
     </div>

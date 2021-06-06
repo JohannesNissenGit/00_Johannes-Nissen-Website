@@ -1,7 +1,34 @@
-.contactContainer {
+/*.contactContainer {
     flex-direction: column;
     align-items: center;
     width: 100%;
+}*/
+
+.marginTop150{
+    margin-top: 150px;
+}
+
+.contactContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100% !important;
+    //height: 110vh !important;
+    position: relative;
+    background-color: #1a1a1a;
+    overflow: hidden;
+}
+
+.contactContainer:before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 100vh;
+    top: 150px;
+    left: -50%;
+    background-color: black;
+    /*background: url(background.png) 0 0 repeat;*/
+    transform: rotate(-6deg);
 }
 
 .contactFormContainer {
