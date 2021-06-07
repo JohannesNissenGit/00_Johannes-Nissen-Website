@@ -149,6 +149,7 @@ body {
         border: 3px solid white;
         border-radius: 50%;
         margin-top: 50px;
+        background-color: transparent !important;
         cursor: pointer;
         transition: transform ease-in-out 225ms;
 
@@ -269,3 +270,5 @@ body {
         opacity: 1;
     }
 }
+
+
