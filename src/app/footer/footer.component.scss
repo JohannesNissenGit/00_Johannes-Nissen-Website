@@ -22,3 +22,53 @@
     text-decoration: none;
     color: white;
 }
+
+
+/*tooltip*/
+a.tooltip {
+    position: relative;
+    text-decoration: none;
+  }
+  a.tooltip:after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 140%;
+    left: -85%;
+    background: #000000;
+    padding: 5px 15px;
+    color: white;
+    -webkit-border-radius: 10px;
+    -moz-border-radius   : 10px;
+    border-radius        : 10px;
+    border: solid 2px  #2dfcd8;
+    white-space: nowrap;
+    opacity: 0;
+    
+    -webkit-transition: all 0.4s ease;
+    -moz-transition   : all 0.4s ease;
+  }
+  a.tooltip:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 30px solid black;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+   
+
+    -webkit-transition: all 0.4s ease;
+    -moz-transition   : all 0.4s ease;
+    opacity: 0;
+    left: 15%;
+    bottom: 110%;
+  }
+  a.tooltip:hover:after {
+    bottom: 120%;
+  }
+  a.tooltip:hover:before {
+    bottom: 90%;
+  }
+  a.tooltip:hover:after, a:hover:before {
+    opacity: 1;
+  }
