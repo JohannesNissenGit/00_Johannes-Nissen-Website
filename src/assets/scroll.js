@@ -19,6 +19,12 @@ function scrollView(id, scroller){
     }, 225);
 }
 
+function simpleScroll(id) {
+    let element = document.getElementById(id);
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+/*not sure uf working*/
 function scrollTo(elementId){
 
 let id = `"#" + ${elementId}`;
@@ -26,3 +32,4 @@ $('html, body').animate({
     scrollTop: $(id).offset(0).top
 }, 225);
 }
+

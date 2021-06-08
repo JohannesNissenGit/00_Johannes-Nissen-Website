@@ -4,6 +4,7 @@ body {
     margin: 0;
     font-family: "Inter", sans-serif;
     background-color: black;
+    //scroll-behavior: smooth;
 }
 
 .anchor {
@@ -141,12 +142,12 @@ body {
     display: flex;
     justify-content: center;
     img {
-        padding: 10px;
-        width: 90px;
-        height: 90px;
+        padding: 8px;
+        width: 60px;
+        height: 60px;
         object-fit: cover;
         object-position: center;
-        border: 3px solid white;
+        border: 2px solid white;
         border-radius: 50%;
         margin-top: 50px;
         background-color: transparent !important;
