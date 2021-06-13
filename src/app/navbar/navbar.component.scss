@@ -1,9 +1,9 @@
-.flexGrow1{
+.flexGrow1 {
     flex-grow: 1;
 }
 
-.navbarContainer{
-    width:98vw;
+.navbarContainer {
+    width: 98vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-   display: flex;
+    display: flex;
     //justify-content: flex-end;
 }
 
@@ -50,9 +50,9 @@ ul li span {
     background-color: var(--c);
     transform: translateY(150%);
     border-radius: 50%;
-    left: calc((var(--n)-1) * 25%);
+    //left: calc((var(--n)-1) * 25%);
     transition: 0.5s;
-    transition-delay: calc((var(--n)-1)*0.1s);
+    //transition-delay: calc((var(--n)-1) * 0.1s);
     z-index: -1;
 }
 
@@ -65,20 +65,29 @@ ul li .linkSection:hover span {
     transform: translateY(0) scale(2);
 }
 
-ul li .linkSection span:nth-child(1){
+ul li .linkSection span:nth-child(1) {
     --n: 1;
+    left: 0;
+    transition-delay: 0s;
 }
 
-ul li .linkSection span:nth-child(2){
+ul li .linkSection span:nth-child(2) {
     --n: 2;
+    left: 25%;
+    transition-delay: 0.1s;
 }
 
-ul li .linkSection span:nth-child(3){
+ul li .linkSection span:nth-child(3) {
     --n: 3;
+    left: 50%;
+    transition-delay: 0.2s;
 }
 
-ul li .linkSection span:nth-child(4){
-    --n: 4;}
+ul li .linkSection span:nth-child(4) {
+    --n: 4;
+    left: 75%;
+    transition-delay: 0.3s;
+}
 
 /*
 ul li a {
