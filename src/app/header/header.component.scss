@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: calc(100vh - 90px);
 }
 
 .welcomeContainer {
@@ -31,6 +31,10 @@
         object-position: right;
         border-radius: 50%;
     }
+}
+
+.headerHello{
+    font-size: 80px !important;
 }
 
 /*Neon fx*/
