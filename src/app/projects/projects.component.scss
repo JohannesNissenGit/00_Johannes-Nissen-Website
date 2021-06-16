@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100% !important;
-    height: 100vh !important;
+    //width: 100% !important;
+    //height: 100% !important;
     position: relative;
     background-color: #1a1a1a;
     overflow: hidden;
@@ -123,6 +123,14 @@
         color: white !important;
         background-color: #2dfcd8 !important;
     }
+}
+
+.scrollProjects{
+    margin-bottom: 10px !important;
+}
+
+.projectsSpacerBottom{
+    margin-bottom: 200px;
 }
 
 /*animation shimmer*/
