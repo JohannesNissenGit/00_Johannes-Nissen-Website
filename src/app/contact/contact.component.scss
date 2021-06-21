@@ -4,7 +4,7 @@
     width: 100%;
 }*/
 
-.marginTop150{
+.marginTop150 {
     margin-top: 150px;
 }
 
@@ -129,5 +129,28 @@ textarea {
         &:hover {
             transform: scale(1.2);
         }
+    }
+}
+
+
+/*****MEDIA QUERIES********************************/
+@media only screen and (max-width: 1190px) {
+
+    form{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    form{
+        width: 96%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    form{
+        width: 98%;
     }
 }
