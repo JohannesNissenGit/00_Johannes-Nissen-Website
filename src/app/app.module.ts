@@ -17,6 +17,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { AboutmeComponent } from './aboutme/aboutme.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PlaceholderComponent } from './placeholder/placeholder.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     ProjectsComponent,
     ContactComponent,
     AboutmeComponent,
-    NavbarComponent
+    NavbarComponent,
+    PlaceholderComponent
   ],
   imports: [
     BrowserModule,
