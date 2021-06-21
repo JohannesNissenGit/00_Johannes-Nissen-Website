@@ -1,32 +1,26 @@
-.legalLinkstyle{
-
-    a{
-    text-decoration: underline;
-    color: rgba(255, 255, 255, 0.76);
+.legalLinkstyle {
+    a {
+        text-decoration: underline;
+        color: rgba(255, 255, 255, 0.76);
 
         &:hover {
             color: white;
         }
-}
-
-
+    }
 }
 
 ul {
-    //width: 1200px;
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-    //justify-content: flex-end;
 }
 
 ul li .linkSection {
     cursor: pointer;
     --c: #2dfcd8;
     --d: white;
-    //--c: white;
-    //color: var(--c);
+
     color: var(--d);
     font-size: 16px;
     border-radius: 0.5em;
@@ -91,3 +85,10 @@ ul li .linkSection span:nth-child(4) {
     left: 75%;
     transition-delay: 0.3s;
 }
+
+.listData1 {
+    display: flex !important;
+    flex-direction: column !important;
+
+}
+

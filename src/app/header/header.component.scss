@@ -184,18 +184,26 @@ $color2: #2dfcd8;
     }
 }
 
-/* Medium devices */
-@media only screen and (max-width: 992px) {
+
+@media only screen and (max-width: 525px) {
+    .welcomeText {
+        width: 98vw !important;
+        overflow: hidden;
+    }
 }
 
-/* large phones */
-@media only screen and (max-width: 768px) {
+
+@media only screen and (max-width: 380px) {
+    .welcomeImage {
+        img {
+            margin-top: 20px;
+            margin-left: 0 !important;
+            height: 220px;
+            width: 220px;
+        }
+    }
+
+
+
 }
 
-/* Small phones */
-@media only screen and (max-width: 600px) {
-}
-
-/* Extra small phones (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-}

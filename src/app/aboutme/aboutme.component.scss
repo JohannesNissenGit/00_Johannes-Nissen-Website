@@ -147,3 +147,18 @@ a:hover:before {
     }
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .aboutMeTextTop {
+    font-size: 14px;
+    width: 85vw;
+    text-align: center;
+  }
+
+  .aboutMeLifeNote{
+    width: 98vw;
+    padding-left: 6;
+    padding-right: 6;
+  }
+}
+
