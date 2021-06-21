@@ -1,3 +1,5 @@
+<!--navbar desktop-->
+
 <div class="navbarContainer">
 
     <ul>
@@ -39,4 +41,26 @@
         </li>
 
     </ul>
+  
 </div>
+
+<!--nav sidebar mobile-->
+
+<div class="navbarBurgerIcon" (click)="showMenuMobile()"> <img src="./assets/icons/menu100.png" alt=""></div>
+
+<!--<div id="navbarSide" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <a href="#" onclick="simpleScroll('aboutMeContainer')">About</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+  </div>-->
+
+  
+
+  <div id="navbarSide" class="sidenav">
+    <div class="closebtn sideNavLinks" (click)="closeNav()">&times;</div>
+    <div class="sideNavLinks" (click)="simpleScroll('aboutMeContainer')">About</div>
+    <div class="sideNavLinks" (click)="simpleScroll('ProjectsContainer')">Projects</div>
+    <div class="sideNavLinks" (click)="simpleScroll('contactContainer')">Contact</div>
+    
+  </div>

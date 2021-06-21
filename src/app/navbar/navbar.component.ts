@@ -12,4 +12,18 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  showMenuMobile(){
+    document.getElementById("navbarSide").style.width = "250px";
+  }
+  
+
+closeNav() {
+  document.getElementById("navbarSide").style.width = "0";
+}
+
+simpleScroll(id) {
+  let element = document.getElementById(id);
+  element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  document.getElementById("navbarSide").style.width = "0";
+}
 }
