@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-:root{
+:root {
     --color: #1a1a1a;
 }
 
@@ -9,7 +9,6 @@ body {
     font-family: "Inter", sans-serif;
     background-color: black;
     //scroll-behavior: smooth;
-
 }
 
 .anchor {
@@ -277,4 +276,62 @@ body {
     }
 }
 
+/*************MEDIA QUERIES*********************************/
 
+@media only screen and (max-width: 1400px) {
+    .hl1 {
+        display: block;
+        font-size: 2em;
+        //font-size: 64px;
+        margin-top: 0.67em;
+        margin-bottom: 0.67em;
+        margin-left: 0;
+        margin-right: 0;
+        font-weight: bold;
+    }
+
+    .hl2 {
+        display: block;
+        font-size: 1.5em;
+        //font-size: 36px;
+        margin-top: 0.83em;
+        margin-bottom: 0.83em;
+        margin-left: 0;
+        margin-right: 0;
+        font-weight: bold;
+    }
+
+    .hl3 {
+        display: block;
+        font-size: 1.17em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: 0;
+        margin-right: 0;
+        font-weight: bold;
+    }
+
+    .p {
+        display: block;
+        font-size: 18px;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .btnPrimaryDefault {
+        height: auto;
+        width: 250px;
+        padding: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color ease-in-out 225ms;
+        //transition: color ease-in-out 225ms;
+        &:hover {
+            color: white !important;
+            background-color: #2dfcd8 !important;
+        }
+    }
+}

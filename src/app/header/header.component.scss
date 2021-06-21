@@ -12,7 +12,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .welcomeText {
@@ -21,8 +20,13 @@
     white-space: nowrap;
 }
 
+.headerRow {
+    display: flex;
+    flex-direction: row !important;
+}
+
 /* scroll button*/
-.scrollDownHeader{
+.scrollDownHeader {
     margin-bottom: 50px;
 }
 
@@ -38,7 +42,7 @@
     }
 }
 
-.headerHello{
+.headerHello {
     font-size: 80px !important;
 }
 
@@ -143,4 +147,55 @@ $color2: #2dfcd8;
         outline: none;
         border: 1px dotted white;
     }
+}
+
+/*****MEDIA QUERIES*************************************************************/
+
+@media only screen and (max-width: 1400px) {
+    .welcomeText {
+        width: 500px;
+    }
+
+    .welcomeImage {
+        img {
+            margin-left: 0 !important;
+            height: 410px;
+            width: 410px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1010px) {
+    .welcomeContainer {
+        flex-direction: column;
+    }
+
+    .welcomeText {
+        align-items: center;
+    }
+
+    .welcomeImage {
+        img {
+            margin-top: 30px;
+            margin-left: 0 !important;
+            height: 310px;
+            width: 310px;
+        }
+    }
+}
+
+/* Medium devices */
+@media only screen and (max-width: 992px) {
+}
+
+/* large phones */
+@media only screen and (max-width: 768px) {
+}
+
+/* Small phones */
+@media only screen and (max-width: 600px) {
+}
+
+/* Extra small phones (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
 }

@@ -68,3 +68,14 @@
 .ScrollSkills{
     margin-bottom: 30px !important;
 }
+
+
+
+/****MEDIA QUERIES *********************************/
+
+@media only screen and (max-width: 840px) {
+ 
+    .listContainer {
+        width: 95vw;
+    }
+}

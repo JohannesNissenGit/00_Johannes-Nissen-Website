@@ -8,8 +8,8 @@ import { PlaceholderComponent } from './placeholder/placeholder.component';
 
 
 const routes: Routes = [
-  {path: '', component: MainComponent},
-  //{path: '', component: PlaceholderComponent},
+  {path: '', component: MainComponent},           // MAIN WEBSITE
+  //{path: '', component: PlaceholderComponent},  //PLACEHOLDER FOR UNFINISHED SITE
   {path: 'imprint', component: ImprintComponent},
   {path: 'legalnotice', component: LegalnoticeComponent}
 ];

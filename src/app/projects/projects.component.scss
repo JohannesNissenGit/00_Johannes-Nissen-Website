@@ -160,3 +160,17 @@
         background-position: 200px 0;
     }
 }
+
+/**MEDIA QUERIES*******************/
+
+@media only screen and (max-width: 1180px) {
+    .projectsListContainer {
+        width: 900px;
+    }
+}
+
+@media only screen and (max-width: 910px) {
+    .projectsListContainer {
+        width: 500px;
+    }
+}
