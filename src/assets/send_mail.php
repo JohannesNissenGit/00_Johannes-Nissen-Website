@@ -11,12 +11,12 @@ switch($_SERVER['REQUEST_METHOD']){
         $json = file_get_contents('php://input');
         $params = json_decode($json);
         
-        //immer austauschen,je nachdem was in der form mitgegeben wird
+        //the next entries are specific (change them if necessary)
         $name = $params->name;
         $email = $params->email; 
         $message = $params->message;
 
-        $recipient = 'nissen.de';
+        $recipient = 'nissenjohannes@web.de';
         $subject = "Homepage JN: Contact From $name <$email>";
         $headers = "From:  noreply@johannes-nissen.developerakademie.com";
 

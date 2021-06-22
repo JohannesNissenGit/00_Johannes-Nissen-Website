@@ -4,17 +4,22 @@
         <div class="hl1 color5white textCenter slide-StartPositionRight" [class.slide-AnimationFromRight]="isInViewport" [class.remove.slide-AnimationFromRight]="!isInViewport">Contact:</div>
 
         <form [formGroup]="profileForm" (ngSubmit)="submit ()" class="slide-animation">
+
             <div class="formRow hl2 color5white">Name</div>
             <input formControlName="name" type="text" class="feedbackInput" #contactname id="#contactname"
                 placeholder="Enter your name*" required />
+
             <div class="formRow hl2 color5white">E-mail adress</div>
             <input formControlName="email" type="text" class="feedbackInput" #contactemail id="contactemail"
                 placeholder="Enter your Email*" required />
+
             <div class="formRow hl2 color5white">Your message</div>
             <textarea formControlName="message" type="text" class="feedbackInput" #contactmessage id="contactmessage"
                 placeholder="Enter your message*" required></textarea>
+                
             <button (click)="openSnackbar()" class="btnPrimaryDefault" type="submit"
                 [disabled]="!profileForm.valid">Submit </button>
+
         </form>
 
         <div class="snackbar d-none zMinus100 bgcolor4black" id="snackbar">Message has been sent. Thank you!</div>

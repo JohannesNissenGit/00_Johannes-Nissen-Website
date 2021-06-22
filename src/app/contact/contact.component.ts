@@ -69,7 +69,7 @@ export class ContactComponent implements OnInit {
   }
 
   /**
-   * sending email opens snackbar
+   * open snackbar after sending mail
    */
 openSnackbar() {
   this.messageSend = true; 
