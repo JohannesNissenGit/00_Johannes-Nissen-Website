@@ -1,3 +1,8 @@
+.skillsScrollTarget{
+    position: absolute;
+    margin-top: 400px;
+}
+
 .skillsContainer {
     display: flex;
     flex-direction: column;
@@ -79,3 +84,5 @@
         width: 95vw;
     }
 }
+
+
