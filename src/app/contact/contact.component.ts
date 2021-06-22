@@ -9,7 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
 
-  endpoint = 'http://johannes-nissen.developerakademie.com/website/assets/send_mail.php'; //connect to php
+  endpoint = 'http://johannes-nissen.developerakademie.com/assets/send_mail.php'; //connect to php
 
   messageSend = false; //to disable button
 
