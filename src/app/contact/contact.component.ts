@@ -17,7 +17,7 @@ export class ContactComponent implements OnInit {
   profileForm = new FormGroup({
     name: new FormControl('', Validators.required),
     email: new FormControl('', Validators.required),
-    message: new FormControl('')
+    message: new FormControl('', Validators.required)
   });
   
   //for animation
@@ -26,9 +26,9 @@ export class ContactComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
 
-  @ViewChild('contactname') contactname: ElementRef;
-  @ViewChild('contactemail') contactemail: ElementRef;
-  @ViewChild('contactmessage') contactmessage: ElementRef;
+  //@ViewChild('contactname') contactname: ElementRef;
+  //@ViewChild('contactemail') contactemail: ElementRef;
+  //@ViewChild('contactmessage') contactmessage: ElementRef;
   
   ngOnInit(): void {
 
@@ -51,16 +51,16 @@ export class ContactComponent implements OnInit {
   submit() {
     
     
-    console.warn(this.profileForm.value);
+    //console.warn(this.profileForm.value); //use for debugging
 
     this.http.post(this.endpoint, this.profileForm.value).subscribe(
       (      response: any) => {
-        console.log(response);
+        //console.log(response);  //use for debugging
 
         this.profileForm.reset();
       },
       (      error: any) => {
-        console.error(error);
+        //console.error(error); //use for debugging
         this.profileForm.reset();
       }
     );
