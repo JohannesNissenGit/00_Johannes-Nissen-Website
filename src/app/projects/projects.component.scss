@@ -1,3 +1,8 @@
+.projectsScrollTarget{
+    position: absolute;
+    margin-top: 500px;
+}
+
 .ProjectsContainer {
     display: flex;
     flex-direction: column;
@@ -173,6 +178,7 @@
     .projectsListContainer {
         width: 500px;
     }
+   
 }
 
 @media only screen and (max-width: 510px) {

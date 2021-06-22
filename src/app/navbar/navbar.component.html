@@ -23,13 +23,17 @@
         </li>-->
 
         <li>
-            <div class="linkSection" onclick="simpleScroll('aboutMeContainer')">about
+            <div class="linkSection" onclick="simpleScroll('aboutMeScrollTarget')">about   
+                <!--<div class="linkSection" (click)="scrollToElement('aboutMeContainer')">about-->
+                    <!--<div class="linkSection"><a href="#aboutMeContainer"> about-->
+                        
                 <span></span><span></span><span></span><span></span>
+            <!--</a>-->
             </div>
         </li>
 
         <li>
-            <div class="linkSection" onclick="simpleScroll('ProjectsContainer')">portfolio
+            <div class="linkSection" onclick="simpleScroll('projectsScrollTarget')">portfolio
                 <span></span><span></span><span></span><span></span>
             </div>
         </li>
@@ -59,8 +63,8 @@
 
   <div id="navbarSide" class="sidenav">
     <div class="closebtn sideNavLinks" (click)="closeNav()">&times;</div>
-    <div class="sideNavLinks" (click)="simpleScroll('aboutMeContainer')">About</div>
-    <div class="sideNavLinks" (click)="simpleScroll('ProjectsContainer')">Projects</div>
+    <div class="sideNavLinks" (click)="simpleScroll('aboutMeScrollTarget')">About</div>
+    <div class="sideNavLinks" (click)="simpleScroll('projectsScrollTarget')">Projects</div>
     <div class="sideNavLinks" (click)="simpleScroll('contactContainer')">Contact</div>
     
   </div>

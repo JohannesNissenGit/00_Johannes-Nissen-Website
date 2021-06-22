@@ -24,6 +24,7 @@ closeNav() {
 simpleScroll(id) {
   let element = document.getElementById(id);
   element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  document.getElementById("navbarSide").style.width = "0";
+  this.closeNav();
 }
+
 }

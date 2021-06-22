@@ -8,7 +8,7 @@ body {
     margin: 0;
     font-family: "Inter", sans-serif;
     background-color: black;
-    //scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
 }
 
 .anchor {
@@ -136,8 +136,6 @@ body {
     margin-left: 12px;
 }
 
-
-
 /*button styles*/
 
 .scrolldownContainer {
@@ -162,6 +160,7 @@ body {
     }
 }
 
+/*big green button Submit, contact, etc */
 .btnPrimaryDefault {
     cursor: pointer;
     border: 2px solid #2dfcd8;
@@ -177,9 +176,25 @@ body {
     //transition: color ease-in-out 225ms;
     &:hover {
         color: white !important;
+        border: 2px solid #2dfcd8;
         background-color: #2dfcd8 !important;
     }
+
 }
+
+/*.btnPrimaryDefault:disabled,
+.btnPrimaryDefault[disabled] {
+        border: 1px solid #999999;
+        //border: 2px solid white;
+        background-color: #cccccc;
+        color: #666666;
+
+        &:hover{
+            color: #666666 !important;
+            background-color: #cccccc !important;
+        }
+    }
+*/ 
 
 /*
 *ANIMATIONS:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -334,7 +349,6 @@ body {
     }
 }
 
-
 @media only screen and (max-width: 1000px) {
     .hl1 {
         display: block;
@@ -349,7 +363,7 @@ body {
 
     .hl2 {
         display: block;
-        font-size: 1.0em;
+        font-size: 1em;
         //font-size: 36px;
         margin-top: 0.3em;
         margin-bottom: 0.3em;
@@ -384,4 +398,3 @@ body {
         text-align: center;
     }
 }
-

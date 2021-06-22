@@ -17,9 +17,9 @@ export class ContactComponent implements OnInit {
   profileForm = new FormGroup({
     name: new FormControl('', Validators.required),
     email: new FormControl('', Validators.required),
-    message: new FormControl('')
+    message: new FormControl('', Validators.required)
   });
-
+  
   //for animation
   isInViewport = false;
   contact!: any;
@@ -31,6 +31,7 @@ export class ContactComponent implements OnInit {
   @ViewChild('contactmessage') contactmessage: ElementRef;
   
   ngOnInit(): void {
+
     this.contact = document.getElementById('contactHeaderAnim');
 
     window.addEventListener("scroll", () => {
@@ -41,17 +42,14 @@ export class ContactComponent implements OnInit {
         //console.log('anchor is in view');
         
       }
+
     })
+
+
   }
 
   submit() {
-    // TODO: Use EventEmitter with form value
-
-    /*let namelength = this.contactname.length;
-    let emaillength = this.contactemail.length;
-    let messagelength = this.contactmessage.length;*/
-
-    //if(namelength > 0 && emaillength > 0 && messagelength >0){ alert("Entries invalid. Please try again."); }
+    
     
     console.warn(this.profileForm.value);
 
