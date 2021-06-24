@@ -4,8 +4,8 @@
 
     <div class="d-flex aboutMeRow">
         <a href="" class="tooltip color5white z10" data-tooltip="That's me!">
-        <img class=" z10 opacity-StartPosition0" [class.opacity-0to1Anim]="isInViewport" src="./assets/img/JoHeader-3.jpg"  
-            alt=""></a>
+            <img class=" z10 opacity-StartPosition0" [class.opacity-0to1Anim]="isInViewport"
+                src="./assets/img/JoHeader-3.jpg" alt=""></a>
         <!--me, myself and i-->
         <div class="anchor" id="aboutMeHeaderAnim"></div>
         <!--anim anchor-->
@@ -65,7 +65,13 @@
     </div>
 
     <!--Arrow scroll down-->
-    <div onclick="scrollView('contactContainer', 'aboutMeScroller')" class="scrolldownContainer z5 aboutMeScroll"><img
+    <!--<div onclick="scrollView('contactContainer', 'aboutMeScroller')" class="scrolldownContainer z5 aboutMeScroll"><img
             src="./assets/icons/arrow-204-256.png" alt="" id="aboutMeScroller">
-    </div>
+    </div>-->
+
+    <a href="#contactContainer">
+        <div class="scrolldownContainer z5 aboutMeScroll"><img src="./assets/icons/arrow-204-256.png" alt=""
+                id="aboutMeScroller">
+        </div>
+    </a>
 </div>

@@ -2,15 +2,18 @@
 <div class="ProjectsContainer bgcolor4black" id="ProjectsContainer">
 
     <!--headline-->
-    <div class="hl1 color5white z5 ProjectsHeadline slide-StartPositionRight" [class.slide-AnimationFromRight]="isInViewport" [class.remove.slide-AnimationFromRight]="!isInViewport">My Work:</div>
+    <div class="hl1 color5white z5 ProjectsHeadline slide-StartPositionRight"
+        [class.slide-AnimationFromRight]="isInViewport" [class.remove.slide-AnimationFromRight]="!isInViewport">My Work:
+    </div>
 
-    <div class="anchor" id="projectsAnim"></div> <!--anchor for headline animation-->
+    <div class="anchor" id="projectsAnim"></div>
+    <!--anchor for headline animation-->
     <div class="anchorProjects2" id="projectsAnim2"></div>
 
     <div class="projectsListContainer">
 
 
-        <div class="singleProjectContainer slide-StartPositionLeft" id="project0"> 
+        <div class="singleProjectContainer slide-StartPositionLeft" id="project0">
             <div class="projectAnimLayer1"></div>
             <img src="./assets/img/p_polloloco.png" alt="">
             <div class="singleProjectDetailsContainer hide ">
@@ -25,7 +28,7 @@
             </div>
 
         </div>
-   
+
         <div class="singleProjectContainer slide-StartPositionLeft" id="project1">
             <img src="./assets/img/p_kings.png" alt="">
             <div class="singleProjectDetailsContainer hide">
@@ -61,7 +64,9 @@
                     Keep your tasks sorted.
                 </div>
                 <div class="singleProjectButtonRow">
-                    <div class="btnStartApp" (click)="startApp('https://www.johannes-nissen.developerakademie.com/Join/index.html')">Start App</div> 
+                    <div class="btnStartApp"
+                        (click)="startApp('https://www.johannes-nissen.developerakademie.com/Join/index.html')">Start
+                        App</div>
                     <div class="btnStartApp" (click)="openDoc('/assets/noDoc.html')">JSdoc</div>
                 </div>
             </div>
@@ -75,17 +80,23 @@
                     might end up hungry.
                 </div>
                 <div class="singleProjectButtonRow">
-                    <div class="btnStartApp" (click)="startApp('./JKochwelt/index.html')">Start App</div> 
+                    <div class="btnStartApp" (click)="startApp('./JKochwelt/index.html')">Start App</div>
                     <div class="btnStartApp" (click)="openDoc('/assets/noDoc.html')">JSdoc</div>
                 </div>
             </div>
         </div>
 
     </div>
-    
+
     <!--Arrow scroll down-->
-    <div onclick="scrollView('aboutMeScrollTarget', 'projectsScroller')" class="scrolldownContainer z5 scrollProjects"><img
-            src="./assets/icons/arrow-204-256.png" alt="" id="projectsScroller">
-    </div>
-    <div class="projectsSpacerBottom"></div> <!--needed to keep button in transformed area-->
+    <!--<div onclick="scrollView('aboutMeScrollTarget', 'projectsScroller')" class="scrolldownContainer z5 scrollProjects">
+        <img src="./assets/icons/arrow-204-256.png" alt="" id="projectsScroller">
+    </div>-->
+
+    <a href="#aboutMeContainer"><div class="scrolldownContainer z5 scrollProjects">
+        <img class="z5" src="./assets/icons/arrow-204-256.png" alt="" id="projectsScroller">
+    </div></a>
+
+    <div class="projectsSpacerBottom"></div>
+    <!--needed to keep button in transformed area-->
 </div>
