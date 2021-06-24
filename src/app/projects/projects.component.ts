@@ -82,7 +82,7 @@ projectsAnimLoop() {
       let counter = this.projectsLoopCounter;
       let currentId = 'project' + counter;
       document.getElementById(currentId).classList.add('slide-AnimationFromLeft');   //  call a setTimeout when the loop is called
-      console.log('iteration');
+      //console.log('iteration');
       this.projectsLoopCounter++;
     }
   }
