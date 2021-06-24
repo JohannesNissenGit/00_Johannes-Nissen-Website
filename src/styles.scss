@@ -179,22 +179,20 @@ body {
         border: 2px solid #2dfcd8;
         background-color: #2dfcd8 !important;
     }
-
 }
 
 .btnPrimaryDefault:disabled,
 .btnPrimaryDefault[disabled] {
-        border: 1px solid #999999;
-        //border: 2px solid white;
-        background-color: #cccccc;
-        color: #666666;
+    border: 1px solid #999999;
+    //border: 2px solid white;
+    background-color: #cccccc;
+    color: #666666;
 
-        &:hover{
-            color: #666666 !important;
-            background-color: #cccccc !important;
-        }
+    &:hover {
+        color: #666666 !important;
+        background-color: #cccccc !important;
     }
-
+}
 
 /*
 *ANIMATIONS:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -267,6 +265,55 @@ body {
         transform: translate(0, 0);
     }
 }
+
+/*
+*Animation delays 
+*/
+
+.skillSingleContainer:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.skillSingleContainer:nth-child(2) {
+    animation-delay: 0.3s;
+}
+.skillSingleContainer:nth-child(3) {
+    animation-delay: 0.4s;
+}
+.skillSingleContainer:nth-child(4) {
+    animation-delay: 0.5s;
+}
+.skillSingleContainer:nth-child(5) {
+    animation-delay: 0.6s;
+}
+.skillSingleContainer:nth-child(6) {
+    animation-delay: 0.7s;
+}
+.skillSingleContainer:nth-child(7) {
+    animation-delay: 0.8s;
+}
+.skillSingleContainer:nth-child(8) {
+    animation-delay: 0.9s;
+}
+
+.skillSingleContainer:nth-child(9) {
+    animation-delay: 1s;
+}
+
+.singleProjectContainer:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.singleProjectContainer:nth-child(2) {
+    animation-delay: 0.3s;
+}
+.singleProjectContainer:nth-child(3) {
+    animation-delay: 0.4s;
+}
+.singleProjectContainer:nth-child(4) {
+    animation-delay: 0.5s;
+}
+.singleProjectContainer:nth-child(5) {
+    animation-delay: 0.6s;}
+
 
 /*animation opacity transformation 0 to 1*/
 .opacity-StartPosition0 {

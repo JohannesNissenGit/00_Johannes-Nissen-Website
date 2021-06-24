@@ -12,6 +12,7 @@ export class SkillsComponent implements OnInit {
   skillsAnim2!: any;
   skillsLoaded = false;
   skillsLoopCounter = 0;
+  index = 0;
 
   constructor() { }
 
@@ -36,17 +37,17 @@ export class SkillsComponent implements OnInit {
       if (rect.y >= 0 && rect.y <= window.innerHeight) {
         this.isInViewport = true;
         //console.log('anchor is in view');
-        this.loadSkillsLoop();
+        // this.loadSkillsLoop();
+        this.skillsAnimLoop();
       }
-
     })
-
-
-
   }
 
+  /*
+  *load slide animation OLD (new one see below)
+  */
   loadSkillsLoop() {    //  https://stackoverflow.com/questions/3583724/how-do-i-add-a-delay-in-a-javascript-loop     
-    if (this.skillsLoopCounter <9) {
+    if (this.skillsLoopCounter < 9) {
       setTimeout(() => {
         let counter = this.skillsLoopCounter;
         let currentId = 'skill' + counter;
@@ -60,4 +61,19 @@ export class SkillsComponent implements OnInit {
     }
   }
 
+/*
+*load slide animation NEW
+*/
+  skillsAnimLoop() {
+    if (!this.skillsLoaded) {
+      this.skillsLoaded = true;
+      for (this.index = 0; this.index < 9; this.index++) {
+        let counter = this.skillsLoopCounter;
+        let currentId = 'skill' + counter;
+        document.getElementById(currentId).classList.add('slide-AnimationFromLeft');   //  call a setTimeout when the loop is called
+        //console.log('iteration');
+        this.skillsLoopCounter++;
+      }
+    }
+  }
 }

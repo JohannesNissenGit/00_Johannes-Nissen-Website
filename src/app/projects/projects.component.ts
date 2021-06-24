@@ -12,7 +12,7 @@ export class ProjectsComponent implements OnInit {
   projectsAnim2!: any;
   projectsLoaded = false;
   projectsLoopCounter = 0;
-
+  index = 0;
 
   constructor() { }
 
@@ -37,7 +37,8 @@ export class ProjectsComponent implements OnInit {
       if (rect.y >= 0 && rect.y <= window.innerHeight) {
         this.isInViewport = true;
         //console.log('anchor is in view');
-        this.loadProjectsLoop();
+        //this.loadProjectsLoop();
+        this.projectsAnimLoop();
       }
 
     })
@@ -52,18 +53,41 @@ export class ProjectsComponent implements OnInit {
     window.open(url, '_blank');
   }
 
+
+  /**
+   * load silde animation OLD (new one: see below)
+   */
   loadProjectsLoop() {
-    if (this.projectsLoopCounter < 5) {   //  https://stackoverflow.com/questions/3583724/how-do-i-add-a-delay-in-a-javascript-loop     
+    if (this.projectsLoopCounter < 4) {   //  https://stackoverflow.com/questions/3583724/how-do-i-add-a-delay-in-a-javascript-loop     
       setTimeout(() => {
         let counter = this.projectsLoopCounter;
         let currentId = 'project' + counter;
         document.getElementById(currentId).classList.add('slide-AnimationFromLeft');   //  call a setTimeout when the loop is called
         console.log('iteration');
         this.projectsLoopCounter++;                    //  increment the counter
-        if (this.projectsLoopCounter < 5) {           //  if the counter <9, call the loop function
+        if (this.projectsLoopCounter < 4) {           //  if the counter <9, call the loop function
           this.loadProjectsLoop();             //  ..  again which will trigger another 
         }                       //  ..  setTimeout()
       }, 125)
     }
   }
+
+/*
+*load slide animation NEW
+*/
+projectsAnimLoop() {
+  if (!this.projectsLoaded) {
+    this.projectsLoaded = true;
+    for (this.index = 0; this.index < 5; this.index++) {
+      let counter = this.projectsLoopCounter;
+      let currentId = 'project' + counter;
+      document.getElementById(currentId).classList.add('slide-AnimationFromLeft');   //  call a setTimeout when the loop is called
+      console.log('iteration');
+      this.projectsLoopCounter++;
+    }
+  }
 }
+}
+
+
+
